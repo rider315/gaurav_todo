@@ -31,19 +31,16 @@
 // export default store;
 
 
-
 import { createStore, combineReducers, applyMiddleware } from 'redux';
-import thunk from 'redux-thunk'; // Fixed import of thunk
+import thunk from 'redux-thunk'; // Correct import of redux-thunk
 import { todosReducers } from './reducers/todosReducer';
 import { tabReducer } from './reducers/tabReducer';
 
-// Combine reducers
 const reducer = combineReducers({
     todos: todosReducers,
-    currentTab: tabReducer
+    currentTab: tabReducer,
 });
 
-// Setup middleware
 const middleware = [thunk];
 
 // Use composeWithDevTools only in development
@@ -54,7 +51,6 @@ if (process.env.NODE_ENV === 'development') {
     composeEnhancers = composeWithDevTools;
 }
 
-// Create store
 const store = createStore(
     reducer,
     composeEnhancers(applyMiddleware(...middleware))
