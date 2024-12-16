@@ -4,7 +4,8 @@ import { ADDNEW_TODO, GETALL_TODO, TOGGLE_TODO, UPDATE_TODO, DELETE_TODO, TOGGLE
 // import { ADDNEW_TODO, GETALL_TODO, , , ,  } from './type';
 
 // const API_URL = 'http://www.gauravchaudhary.online:5001';
-const API_URL = 'http://localhost:5001';
+const API_URL = 'https://todobackend-qs2b.onrender.com';
+// const API_URL = 'http://localhost:5001';
 
 export const addNewTodo = (data) => async (dispatch) => {
     try {
