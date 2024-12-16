@@ -32,7 +32,9 @@
 
 
 import { createStore, combineReducers, applyMiddleware } from 'redux';
-import thunk from 'redux-thunk'; // Correct import of redux-thunk
+// Import redux-thunk correctly
+import thunk from 'redux-thunk'; 
+
 import { todosReducers } from './reducers/todosReducer';
 import { tabReducer } from './reducers/tabReducer';
 
@@ -43,7 +45,7 @@ const reducer = combineReducers({
 
 const middleware = [thunk];
 
-// Use composeWithDevTools only in development
+// Use composeWithDevTools in development
 let composeEnhancers = (f) => f;
 
 if (process.env.NODE_ENV === 'development') {
